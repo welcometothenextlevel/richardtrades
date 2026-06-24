@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a call-out with Richbright Home Services in Frankston and surrounding suburbs, VIC. Call 0450 258 198 for painting, cleaning, restumping, reblocking, and relevelling.">
+  <title>Book a Call-Out | Richbright Home Services Frankston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">R</span><span>Richbright Home Services</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span>Menu</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="painting.html">Painting</a>
+      <a href="cleaning.html">Cleaning</a>
+      <a href="restumping.html">Restumping</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+    <a class="header-cta" href="tel:+61450258198">0450 258 198</a>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div>
+        <p class="eyebrow">Book a call-out</p>
+        <h1>Tell Richard what needs sorting.</h1>
+        <p>Call direct or send the job details. A call-out fee applies for on-site assessments, so the job can be checked properly before work begins.</p>
+        <a class="phone-feature" href="tel:+61450258198">0450 258 198</a>
+      </div>
+      <form class="contact-form" id="callout-form" action="#" novalidate>
+        <p class="form-note">A call-out fee applies for on-site assessments.</p>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="service">Service needed</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Painting</option>
+            <option>House Cleaning</option>
+            <option>Restumping / Reblocking / Relevelling</option>
+            <option>Multiple services</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Brief description of job</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us the suburb, job type, access, timing, and anything that helps."></textarea>
+        </div>
+        <div class="form-row">
+          <label for="contact-time">Preferred contact time</label>
+          <input type="text" id="contact-time" name="contact-time" placeholder="Example: Weekdays after 4pm">
+        </div>
+        <button class="button button-primary form-submit" type="submit">Request a Call-Out</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">R</span><span>Richbright Home Services</span></a><p>Painting, house cleaning, and restumping across Frankston and surrounding suburbs, VIC.</p></div>
+    <address><a href="tel:+61450258198">0450 258 198</a><a href="mailto:info@richbrighthomeservices.com.au">info@richbrighthomeservices.com.au</a><span>Frankston and surrounding suburbs, VIC</span></address>
+  </footer>
+  <div class="mobile-action-bar" aria-label="Quick contact actions"><a href="tel:+61450258198">Call</a><a href="contact.html">Book Call-Out</a></div>
+  <script src="script.js"></script>
+</body>
+</html>

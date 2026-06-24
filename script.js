@@ -1,22 +1,32 @@
-const quoteForm = document.querySelector("#quote-form");
+const navToggle = document.querySelector(".nav-toggle");
+const primaryNav = document.querySelector("#primary-nav");
+
+if (navToggle && primaryNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = primaryNav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
+const calloutForm = document.querySelector("#callout-form");
 const formStatus = document.querySelector("#form-status");
 
-if (quoteForm && formStatus) {
-  quoteForm.addEventListener("submit", (event) => {
+if (calloutForm && formStatus) {
+  calloutForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const requiredFields = quoteForm.querySelectorAll("[required]");
-    const missingField = Array.from(requiredFields).find((field) => !field.value.trim());
+    const requiredFields = Array.from(calloutForm.querySelectorAll("[required]"));
+    const missingField = requiredFields.find((field) => !field.value.trim());
 
     if (missingField) {
-      formStatus.textContent = "Please fill in the required details and we will get the quote moving.";
+      formStatus.textContent = "Please add the required details so Richard can follow up properly.";
       formStatus.classList.add("is-error");
       missingField.focus();
       return;
     }
 
-    quoteForm.reset();
-    formStatus.textContent = "Thanks, your quote request is ready. [Business Name] will contact you shortly.";
+    calloutForm.reset();
+    formStatus.textContent = "Thanks. Your call-out request is ready and Richbright Home Services will be in touch.";
     formStatus.classList.remove("is-error");
   });
 }
